@@ -1,0 +1,95 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2
+		">
+			<h2>Novo Contato</h2>
+
+			<?php if (isset($error)): ?>
+				<div class="alert alert-danger">
+					<?=	$error ?>
+				</div>
+			<?php endif; ?>	
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Adicionar Contato
+				</div>
+
+				<div class="panel-body">
+					<form action="<?= PATH ?>/admin/contatos/add" method="post" enctype="multipart/form-data">
+
+					  
+					  <div class="form-group">
+
+						<label for="nome">Nome *</label>
+					    <input type="text" class="form-control" name="nome" id="nome" placeholder="nome" maxlength="35">
+
+						
+
+					    <label for="telefone">Telefone *</label>
+					    <input type="text" class="form-control campoDefault numd" name="telefone" id="telefone" placeholder="telefone">
+					
+					<a href="#" id="btnAdicionatelefone2" class=" addtel"><i class="fa fa-plus"></i> Adicionar mais um telefone</a>
+
+					<div style="margin-top: 15px;" id="imendaHTMLtelefone2"class="form-group" >
+						<div class="imendawrapperTel">
+							<label for='telefone2'>Telefone 2</label>
+						    <input type='text' class='telefone2 form-control novoCampo  numt ' name='telefone2' id='telefone2' placeholder='telefone2'>
+
+						    <span class='input-group-btn'>
+						    	<button class='btn btnExcluirtelefone2' type='button'><span class='fa fa-trash'></span></button>
+						    </span>	
+						</div>
+					</div>
+				
+					<a href="#" id="btnAdicionacelular" class=" addcel"><i class="fa fa-plus"></i> Adicionar um celular</a>
+
+					<div id="imendaHTMLcelular" class="form-group">
+						<div class="imendawrapperCel">
+						
+							<label for='celular'>Celular</label>
+						    <input type='text' class='celular form-control novoCampo  numc ' name='celular' id='celular' placeholder='celular'>
+
+						    <span class='input-group-btn'>
+						    	<button class='btn btnExcluircelular' type='button'><span class='fa fa-trash'></span></button>
+						    </span>
+						</div>
+					</div>
+
+					    <label for="email">Email *</label>
+					    <input type="email" class="form-control" name="email" id="email" placeholder="email" maxlength="40" >
+
+					    <label for="cep">CEP</label>
+					    <input type="text" class="form-control" name="cep" id="cep" placeholder="cep">
+
+					    <label for="endereco">Endereço</label>
+					    <input type="text" class="form-control" name="endereco" id="endereco" placeholder="endereco" maxlength="45">
+
+					    <label for="numero">Numero</label>
+					    <input type="text" class="form-control" name="numero" id="numero" placeholder="numero" maxlength="6">
+
+					    <label for="complemento">Complemento</label>
+					    <input type="text" class="form-control" name="complemento" id="complemento" placeholder="complemento" maxlength="42">
+
+					    <label for="cidade">Cidade</label>
+					    <input type="text" class="form-control" name="cidade" id="cidade" placeholder="cidade" maxlength="30">
+
+					    <label for="uf">UF</label>
+					    <input type="text" class="form-control" name="uf" id="uf" placeholder="uf" maxlength="2">
+
+					    <label for="pais">País</label>
+					    <input type="text" class="form-control" name="pais" id="pais" placeholder="pais" maxlength="23">
+
+					</div>
+					  
+					  <button id="btnSalvar" type="submit" class="btn btn-success">Cadastrar</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<div class="conteudo-view col-md-10 col-md-offset-1">
+			<a href="<?= PATH ?>/admin/contatos" class="btn btn-primary btn-block btn-novo-contato">Voltar</a>	
+		</div>
+	</div>
+</div>

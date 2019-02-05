@@ -1,0 +1,81 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2
+		">
+			<h2>Editar Contato</h2>
+
+			<?php if (isset($error)): ?>
+				<div class="alert alert-danger">
+					<?=	$error ?>
+				</div>
+			<?php endif; ?>	
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Editar Contato
+				</div>
+
+				<div class="panel-body">
+					<form action="<?= PATH ?>/admin/contatos/<?=$contato->id?>/edit" method="post" enctype="multipart/form-data">
+					
+					<div class="form-group">
+
+						<label for="nome">Nome *</label>
+					    <input type="text" class="form-control" name="nome" id="nome" placeholder="nome" maxlength="35" value="<?=$contato->nome ?>">
+
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+ 						<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+ 						<script>
+ 							$(".numt").mask("(00) 0000-0000");
+ 							$("#telefone").mask("(00) 0000-0000");
+ 							$(".numc").mask("(00) 0 0000-0000");
+ 							$("#cep").mask("00000-000");
+ 						</script>	
+
+					    <label for="telefone">Telefone *</label>
+					    <input type="text" class="form-control campoDefault numd" name="telefone" id="telefone" placeholder="telefone" value="<?=$contato->telefone ?>">
+
+						<label for='telefone2'>Telefone 2</label>
+					    <input type='text' class='telefone2 form-control novoCampo  numt ' name='telefone2' id='telefone2' placeholder='telefone2' value='<?=$contato->telefone2 ?>'>
+					
+						<label for='celular'>Telefone 2</label>
+					    <input type='text' class='celular form-control novoCampo  numc ' name='celular' id='celular' placeholder='celular' value='<?=$contato->celular ?>'>
+
+					    <label for="email">Email *</label>
+					    <input type="email" class="form-control" name="email" id="email" placeholder="email" maxlength="40" value="<?=$contato->email ?>" >
+
+					    <label for="cep">CEP</label>
+					    <input type="text" class="form-control" name="cep" id="cep" placeholder="cep" value="<?=$contato->cep ?>">
+
+					    <label for="endereco">Endereço</label>
+					    <input type="text" class="form-control" name="endereco" id="endereco" placeholder="endereco" maxlength="45" value="<?=$contato->endereco ?>">
+
+					    <label for="numero">Numero</label>
+					    <input type="text" class="form-control" name="numero" id="numero" placeholder="numero" maxlength="6" value="<?=$contato->numero ?>">
+
+					    <label for="complemento">Complemento</label>
+					    <input type="text" class="form-control" name="complemento" id="complemento" placeholder="complemento" maxlength="42" value="<?=$contato->complemento ?>">
+
+					    <label for="cidade">Cidade</label>
+					    <input type="text" class="form-control" name="cidade" id="cidade" placeholder="cidade" maxlength="30" value="<?=$contato->cidade ?>">
+
+					    <label for="uf">UF</label>
+					    <input type="text" class="form-control" name="uf" id="uf" placeholder="uf" maxlength="2" value="<?=$contato->UF ?>">
+
+					    <label for="pais">País</label>
+					    <input type="text" class="form-control" name="pais" id="pais" placeholder="pais" maxlength="23" value="<?=$contato->pais ?>">
+
+					</div>
+					  
+					  <button type="submit" class="btn btn-success">Atualizar</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<div class="conteudo-view col-md-10 col-md-offset-1">
+			<a href="<?= PATH ?>/admin/contatos" class="btn btn-primary btn-block btn-novo-contato">Voltar</a>	
+		</div>
+	</div>
+</div>

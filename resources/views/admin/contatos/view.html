@@ -1,0 +1,64 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h2><?= $contato->nome ?></h2>
+			<br>
+			<h4><b>Telefone:</b> <span class="numt"><?= $contato->telefone ?></span></h4>
+
+			<?php if($contato->telefone2 >0){
+			  	echo "<h4><b>Telefone 2:</b> <span class='numt'> ".$contato->telefone2."<span></h4>";
+			}
+			?>
+
+			<?php if($contato->celular >0){
+			  	echo "<h4><b>Celular:</b> <span class='numc'>".$contato->celular."<span></h4>";
+			}
+			?>
+			
+			<h4><b>Email:</b> <?= $contato->email ?></h4>
+
+			<?php if($contato->cep >0){
+			  	echo "<h4><b>Cep:</b> <span class='cep'>".$contato->cep."</span></h4>";
+			}
+			?>
+			
+			<?php if($contato->endereco !=null){
+			  	echo "<h4><b>Endereço:</b> ".$contato->endereco."</h4>";
+			}
+			?>
+
+			<?php if($contato->numero >0){
+			  	echo "<h4><b>Numero:</b> ".$contato->numero."</h4>";
+			}
+			?>
+			
+			<?php if($contato->complemento !=null){
+			  	echo "<h4><b>Complemento:</b> ".$contato->complemento."</h4>";
+			}
+			?>
+			
+			<?php if($contato->cidade !=null){
+			  	echo "<h4><b>Cidade:</b> ".$contato->cidade."</h4>";
+			}
+			?>
+			
+			<?php if($contato->uf !=null){
+			  	echo "<h4><b>UF:</b> ".$contato->uf."</h4>";
+			}
+			?>
+
+			<?php if($contato->pais !=null){
+			  	echo "<h4><b>País:</b> ".$contato->pais."</h4>";
+			}
+			?>
+			
+		</div>
+		<div class="conteudo-view col-md-10 col-md-offset-1 center-block text-center">
+			<a href="<?= PATH ?>/admin/contatos" class="btn btn-primary btn-lg btn-novo-contato">Voltar</a>	
+
+			<a href="<?= PATH ?>/admin/contatos/<?= $contato->id ?>/edit" alt="editar" class="btn btn-warning btn-lg">Editar</a>
+		</div>
+		
+	</div>
+</div>
+

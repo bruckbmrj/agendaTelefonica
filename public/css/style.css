@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #111;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ff0000;
+}
+
+.container{
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.topo-um{
+	width: 100%;
+	height: 70px;
+	background: #ff0000;
+}
+
+.logo-site{
+	color: #fff;
+	padding-top: 15px;
+	float: left;
+}
+
+#menu{
+	float: right;
+	margin-top: 15px;
+}
+
+#menu li{
+	float: left;
+	list-style: none;
+}
+
+#menu li a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding:  15px;
+}
+
+#menu li a:hover{
+	text-decoration: underline;
+}
+
+section{
+
+}
+
+footer{
+	background-color: #ff0000;
+	height: 120px;
+}
+
+address{
+	color: #fff;
+	padding-top: 25px;
+}
+
+/*Post*/
+.btn-novo-post{
+	margin-bottom: 12px;
+}

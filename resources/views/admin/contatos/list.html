@@ -1,0 +1,47 @@
+<div class="container container-contatos">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Contatos</h2>
+
+			<a href="<?= PATH ?>/admin/contatos/add" class="btn btn-primary btn-lg btn-block btn-novo-contato">Adicionar Contato</a>
+			<br>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Todos os contatos
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<table class="table table-responsive">
+					<thead>
+						<tr>
+							<th>#</th> <th>Nome</th> <th>Telefone</th> <th>Email</th> <th>Ações</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<?php if (isset($contatos)):foreach ($contatos as $contato): ?>
+						<tr>
+							<td><?= $contato->id ?></td>
+							<td><?= $contato->nome ?></td>
+							<td class="numt"><?= $contato->telefone ?></td>
+							<td><?= $contato->email ?></td>
+							<td>
+								<a href="<?= PATH ?>/admin/contatos/<?= $contato->id ?>/view" alt="visualizar" class="btn btn-info"><span class="visible-md visible-lg">Visualizar</span>
+								<span class="visible-sm visible-xs"><i class="fas fa-eye"></i></span>	
+								</a>
+								<a href="<?= PATH ?>/admin/contatos/<?= $contato->id ?>/edit" alt="editar" class="btn btn-warning"><span class="visible-md visible-lg">Editar</span><span class="visible-sm visible-xs"><i class="fas fa-user-edit"></i></span></a>
+								<a href="<?= PATH ?>/admin/contatos/<?= $contato->id ?>/del" alt="excluirr" class="btn btn-danger"><span class="visible-md visible-lg">Excluir</span><span class="visible-sm visible-xs"><i class="fas fa-trash-alt"></i></span></a>
+							</td>
+								
+						</tr>
+						<?php endforeach; endif; ?>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+</div>	
+	
